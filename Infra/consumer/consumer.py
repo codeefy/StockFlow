@@ -25,7 +25,7 @@ except Exception:
 #Define Consumer
 consumer = KafkaConsumer(
     "stock-quotes",
-    bootstrap_servers=["host.docker.internal:29092"],
+    bootstrap_servers=["localhost:29092"],
     auto_offset_reset="earliest",
     enable_auto_commit=True,
     group_id="bronze-consumer1",
