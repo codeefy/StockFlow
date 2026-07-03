@@ -22,3 +22,15 @@ airflow/plugins/__pycache__/
 # OS
 .DS_Store
 Thumbs.db
+
+# Airflow runtime logs
+Infra/logs/
+**/logs/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment
+venv/
+.env
