@@ -170,3 +170,38 @@
 [2026-07-03T18:34:14.537+0000] {logging_mixin.py:188} INFO - [2026-07-03T18:34:14.535+0000] {dag.py:3089} INFO - Sync 1 DAGs
 [2026-07-03T18:34:14.573+0000] {logging_mixin.py:188} INFO - [2026-07-03T18:34:14.573+0000] {dag.py:3947} INFO - Setting next_dagrun for minio_to_snowflake to 2026-07-03 18:33:00+00:00, run_after=2026-07-03 18:34:00+00:00
 [2026-07-03T18:34:14.612+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/minio_to_snowflake.py took 1.889 seconds
+[2026-07-03T18:34:44.976+0000] {processor.py:161} INFO - Started process (PID=98) to work on /opt/airflow/dags/minio_to_snowflake.py
+[2026-07-03T18:34:44.979+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/minio_to_snowflake.py for tasks to queue
+[2026-07-03T18:34:44.988+0000] {logging_mixin.py:188} INFO - [2026-07-03T18:34:44.983+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/minio_to_snowflake.py
+[2026-07-03T18:34:46.256+0000] {processor.py:840} INFO - DAG(s) 'minio_to_snowflake' retrieved from /opt/airflow/dags/minio_to_snowflake.py
+[2026-07-03T18:34:46.300+0000] {logging_mixin.py:188} INFO - [2026-07-03T18:34:46.299+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-07-03T18:34:46.335+0000] {logging_mixin.py:188} INFO - [2026-07-03T18:34:46.335+0000] {dag.py:3947} INFO - Setting next_dagrun for minio_to_snowflake to 2026-07-03 18:33:00+00:00, run_after=2026-07-03 18:34:00+00:00
+[2026-07-03T18:34:46.372+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/minio_to_snowflake.py took 1.411 seconds
+[2026-07-03T18:35:16.953+0000] {processor.py:161} INFO - Started process (PID=101) to work on /opt/airflow/dags/minio_to_snowflake.py
+[2026-07-03T18:35:16.970+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/minio_to_snowflake.py for tasks to queue
+[2026-07-03T18:35:16.993+0000] {logging_mixin.py:188} INFO - [2026-07-03T18:35:16.990+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/minio_to_snowflake.py
+[2026-07-03T18:35:26.279+0000] {processor.py:840} INFO - DAG(s) 'minio_to_snowflake' retrieved from /opt/airflow/dags/minio_to_snowflake.py
+[2026-07-03T18:35:26.450+0000] {logging_mixin.py:188} INFO - [2026-07-03T18:35:26.449+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-07-03T18:35:26.626+0000] {logging_mixin.py:188} INFO - [2026-07-03T18:35:26.625+0000] {dag.py:3947} INFO - Setting next_dagrun for minio_to_snowflake to 2026-07-03 18:34:00+00:00, run_after=2026-07-03 18:35:00+00:00
+[2026-07-03T18:35:26.691+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/minio_to_snowflake.py took 9.952 seconds
+[2026-07-03T18:35:57.100+0000] {processor.py:161} INFO - Started process (PID=104) to work on /opt/airflow/dags/minio_to_snowflake.py
+[2026-07-03T18:35:57.103+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/minio_to_snowflake.py for tasks to queue
+[2026-07-03T18:35:57.122+0000] {logging_mixin.py:188} INFO - [2026-07-03T18:35:57.120+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/minio_to_snowflake.py
+[2026-07-03T18:36:06.917+0000] {processor.py:840} INFO - DAG(s) 'minio_to_snowflake' retrieved from /opt/airflow/dags/minio_to_snowflake.py
+[2026-07-03T18:36:07.282+0000] {logging_mixin.py:188} INFO - [2026-07-03T18:36:07.280+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-07-03T18:36:07.445+0000] {logging_mixin.py:188} INFO - [2026-07-03T18:36:07.444+0000] {dag.py:3947} INFO - Setting next_dagrun for minio_to_snowflake to 2026-07-03 18:35:00+00:00, run_after=2026-07-03 18:36:00+00:00
+[2026-07-03T18:36:07.563+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/minio_to_snowflake.py took 10.550 seconds
+[2026-07-03T18:36:38.425+0000] {processor.py:161} INFO - Started process (PID=107) to work on /opt/airflow/dags/minio_to_snowflake.py
+[2026-07-03T18:36:38.430+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/minio_to_snowflake.py for tasks to queue
+[2026-07-03T18:36:38.452+0000] {logging_mixin.py:188} INFO - [2026-07-03T18:36:38.447+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/minio_to_snowflake.py
+[2026-07-03T18:36:43.304+0000] {processor.py:840} INFO - DAG(s) 'minio_to_snowflake' retrieved from /opt/airflow/dags/minio_to_snowflake.py
+[2026-07-03T18:36:43.495+0000] {logging_mixin.py:188} INFO - [2026-07-03T18:36:43.492+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-07-03T18:36:43.672+0000] {logging_mixin.py:188} INFO - [2026-07-03T18:36:43.672+0000] {dag.py:3947} INFO - Setting next_dagrun for minio_to_snowflake to 2026-07-03 18:35:00+00:00, run_after=2026-07-03 18:36:00+00:00
+[2026-07-03T18:36:43.737+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/minio_to_snowflake.py took 5.373 seconds
+[2026-07-03T18:37:02.489+0000] {processor.py:161} INFO - Started process (PID=110) to work on /opt/airflow/dags/minio_to_snowflake.py
+[2026-07-03T18:37:02.496+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/minio_to_snowflake.py for tasks to queue
+[2026-07-03T18:37:02.503+0000] {logging_mixin.py:188} INFO - [2026-07-03T18:37:02.502+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/minio_to_snowflake.py
+[2026-07-03T18:37:06.386+0000] {processor.py:840} INFO - DAG(s) 'minio_to_snowflake' retrieved from /opt/airflow/dags/minio_to_snowflake.py
+[2026-07-03T18:37:06.461+0000] {logging_mixin.py:188} INFO - [2026-07-03T18:37:06.460+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-07-03T18:37:06.653+0000] {logging_mixin.py:188} INFO - [2026-07-03T18:37:06.650+0000] {dag.py:3947} INFO - Setting next_dagrun for minio_to_snowflake to 2026-07-03 18:36:00+00:00, run_after=2026-07-03 18:37:00+00:00
+[2026-07-03T18:37:06.782+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/minio_to_snowflake.py took 4.313 seconds
