@@ -1,17 +1,17 @@
 with enriched as (
-    select
-        symbol,
-        market_timestamp,
-        day_low,
-        day_high,
-        current_price
-    from {{ ref('silver_clean_stock_quotes') }}
+   select
+    symbol,
+    fetched_at,
+    day_low,
+    day_high,
+    current_price
+from {{ ref('silver_clean_stock_quotes') }}
 ),
 
 candles as (
     select
         symbol,
-        market_timestamp as candle_time,
+        fetched_at as candle_time,
         day_low as candle_low,
         day_high as candle_high,
         current_price as candle_open,
