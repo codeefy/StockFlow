@@ -120,7 +120,7 @@ Keeping this logic in dbt means Power BI only ever consumes clean, business-read
 
 ## 📊 Dashboard
 
-![Power BI Dashboard](PowerBI/dashboard.jpg)
+![Power BI Dashboard](PowerBI/Dashboard.jpg)
 
 **Components:**
 - **Stock selector** — filter across AAPL, AMZN, GOOGL, MSFT, TSLA
