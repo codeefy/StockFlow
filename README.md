@@ -12,11 +12,7 @@
 
 ## 📌 Project Overview
 
-This project demonstrates an **end-to-end real-time data pipeline** using the **Modern Data Stack**.
-
-We capture **live stock market data** from an external API, stream it in real time, orchestrate transformations, and deliver analytics-ready insights — all in one unified project.
-
-Rather than pulling API data straight into a dashboard, Stock-Flow treats each stage of the journey as its own layer — ingestion, streaming, storage, transformation, and visualization are all decoupled from one another. That separation is what makes the pipeline replayable, testable, and easy to extend.
+**Stock-Flow: Real-Time Market Intelligence is an end-to-end data engineering project built using the Modern Data Stack. It captures live stock market data and transforms it through real-time streaming, orchestration, cloud warehousing, and analytics into interactive market intelligence.**
 
 The pipeline tracks five tech stocks: **AAPL · AMZN · GOOGL · MSFT · TSLA**.
 
@@ -24,11 +20,28 @@ The pipeline tracks five tech stocks: **AAPL · AMZN · GOOGL · MSFT · TSLA**.
   <img src="assets/architecture.jpeg" alt="Stock-Flow Architecture" width="800">
 </p>
 
-**Questions the project answers:**
-- How do you capture live market data without coupling the API directly to downstream systems?
-- How do you keep raw events recoverable before they're transformed?
-- How do you turn raw data into analytics-ready tables using a medallion architecture?
-- How do you let business users explore price, performance, and volatility interactively?
+Yes. **Problem Statement → Solution** is much stronger for a README because it explains **why you built the project**, not only what technologies you used.
+
+You can use this directly:
+
+## 🎯 Problem Statement
+
+Real-time market data moves continuously, but building a reliable path from a live API to business-ready insights is challenging. Directly connecting data sources to dashboards creates tightly coupled systems, raw events can be lost before processing, and unstructured data is difficult to use for consistent analysis.
+
+The project addresses four key challenges:
+
+* How can live market data be captured without coupling the API directly to downstream systems?
+* How can raw events remain recoverable before transformation?
+* How can raw data be converted into trusted, analytics-ready models?
+* How can users interactively explore stock price, performance, and volatility?
+
+## 💡 Solution
+
+**Stock-Flow** solves these challenges through a decoupled, end-to-end data architecture. Live market events are streamed through **Kafka**, preserved in **MinIO**, orchestrated with **Airflow**, loaded into **Snowflake**, and transformed with **dbt** through **Bronze, Silver, and Gold layers**.
+
+The analytics-ready Gold models power an interactive **Power BI dashboard**, enabling users to explore price movement, compare stock performance, and analyze volatility across five technology stocks.
+
+**API → Kafka → MinIO → Airflow → Snowflake → dbt → Power BI**
 
 ---
 
