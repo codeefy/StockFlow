@@ -21,7 +21,7 @@ Rather than pulling API data straight into a dashboard, Stock-Flow treats each s
 The pipeline tracks five tech stocks: **AAPL · AMZN · GOOGL · MSFT · TSLA**.
 
 <p align="center">
-  <img src="assets/architecture.png" alt="Stock-Flow Architecture" width="800">
+  <img src="assets/architecture.jpeg" alt="Stock-Flow Architecture" width="800">
 </p>
 
 **Questions the project answers:**
@@ -120,7 +120,7 @@ Keeping this logic in dbt means Power BI only ever consumes clean, business-read
 
 ## 📊 Dashboard
 
-![Power BI Dashboard](powerbi/dashboard-preview.png)
+![Power BI Dashboard](powerbi/dashboard.jpg)
 
 **Components:**
 - **Stock selector** — filter across AAPL, AMZN, GOOGL, MSFT, TSLA
