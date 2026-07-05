@@ -20,10 +20,6 @@ The pipeline tracks five tech stocks: **AAPL · AMZN · GOOGL · MSFT · TSLA**.
   <img src="assets/architecture.jpeg" alt="Stock-Flow Architecture" width="800">
 </p>
 
-Yes. **Problem Statement → Solution** is much stronger for a README because it explains **why you built the project**, not only what technologies you used.
-
-You can use this directly:
-
 ## 🎯 Problem Statement
 
 Real-time market data moves continuously, but building a reliable path from a live API to business-ready insights is challenging. Directly connecting data sources to dashboards creates tightly coupled systems, raw events can be lost before processing, and unstructured data is difficult to use for consistent analysis.
