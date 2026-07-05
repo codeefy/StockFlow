@@ -1,18 +1,28 @@
-# Stock-Flow
+# Stock-Flow: Real-Time Stock Market Data Pipeline
 
-**A real-time stock market data pipeline — from live API to BI dashboard.**
-
-Stock-Flow streams live quotes through Kafka, lands raw events in MinIO, orchestrates loading into Snowflake with Airflow, transforms the data through a Bronze → Silver → Gold model with dbt, and serves the results in a Power BI dashboard.
-
-`Kafka` · `Python` · `MinIO` · `Airflow` · `Snowflake` · `dbt` · `Docker` · `Power BI`
+![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white)
+![dbt](https://img.shields.io/badge/dbt-FF694B?style=for-the-badge&logo=dbt&logoColor=white)
+![Airflow](https://img.shields.io/badge/Apache%20Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Kafka](https://img.shields.io/badge/Apache%20Kafka-000000?style=for-the-badge&logo=apachekafka&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 
 ---
 
-## Overview
+## 📌 Project Overview
 
-Rather than pulling API data straight into a dashboard, Stock-Flow treats each stage of the journey as its own layer — ingestion, streaming, storage, transformation, and visualization are all decoupled from each other. That separation is what makes the pipeline replayable, testable, and easy to extend.
+This project demonstrates an **end-to-end real-time data pipeline** using the **Modern Data Stack**.
 
-The pipeline tracks five tech stocks: **AAPL, AMZN, GOOGL, MSFT, TSLA**.
+We capture **live stock market data** from an external API, stream it in real time, orchestrate transformations, and deliver analytics-ready insights — all in one unified project.
+
+Rather than pulling API data straight into a dashboard, Stock-Flow treats each stage of the journey as its own layer — ingestion, streaming, storage, transformation, and visualization are all decoupled from one another. That separation is what makes the pipeline replayable, testable, and easy to extend.
+
+The pipeline tracks five tech stocks: **AAPL · AMZN · GOOGL · MSFT · TSLA**.
+
+<p align="center">
+  <img src="assets/architecture.png" alt="Stock-Flow Architecture" width="800">
+</p>
 
 **Questions the project answers:**
 - How do you capture live market data without coupling the API directly to downstream systems?
@@ -22,7 +32,7 @@ The pipeline tracks five tech stocks: **AAPL, AMZN, GOOGL, MSFT, TSLA**.
 
 ---
 
-## Architecture
+## 🏗️ Architecture
 
 ```mermaid
 flowchart LR
@@ -52,7 +62,7 @@ flowchart LR
 
 ---
 
-## Repository Structure
+## 📂 Repository Structure
 
 ```
 stock-flow/
@@ -74,7 +84,7 @@ stock-flow/
 
 ---
 
-## How Data Moves
+## 🔄 How Data Moves
 
 **1. Ingestion** — a Python producer polls the stock API on a fixed interval, serializes each quote to JSON, and publishes it to a Kafka topic.
 
@@ -108,7 +118,7 @@ Keeping this logic in dbt means Power BI only ever consumes clean, business-read
 
 ---
 
-## Dashboard
+## 📊 Dashboard
 
 ![Power BI Dashboard](powerbi/dashboard-preview.png)
 
@@ -151,7 +161,7 @@ RETURN DIVIDE(CurrentValue - MinValue, MaxValue - MinValue, 0) * 100
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
 **Prerequisites:** Docker Desktop, Python 3.x, a Snowflake account, dbt (Snowflake adapter), Power BI Desktop, a stock API key.
 
@@ -188,7 +198,7 @@ dbt debug && dbt run && dbt test
 
 ---
 
-## Status
+## 🗺️ Status
 
 | Component | Status |
 |---|---|
@@ -205,14 +215,14 @@ dbt debug && dbt run && dbt test
 
 ---
 
-## Limitations
+## ⚠️ Limitations
 
 - Fixed watchlist of five stocks, bounded by API rate limits
 - Runs on local Docker infra, not cloud-deployed
 - No schema registry or dead-letter queue yet
 - Dashboard freshness depends on upstream pipeline runs
 
-## Future Scope
+## 🔮 Future Scope
 
 - Configurable watchlists, Kafka Schema Registry, dead-letter queues
 - Great Expectations / Soda for data-quality monitoring
@@ -222,13 +232,13 @@ dbt debug && dbt run && dbt test
 
 ---
 
-## Why This Project
+## 💡 Why This Project
 
 The value here isn't any single tool — it's the integration: a live market event travels from Kafka to MinIO to Snowflake to dbt to Power BI, with every layer serving one clear purpose. It's a working demonstration of real-time ingestion, cloud warehousing, analytics engineering, orchestration, and BI development as one connected system.
 
 ---
 
-## Author
+## 👤 Author
 
 **Rohit Raj**
 M.Sc. Economics & Management, IIIT Lucknow
