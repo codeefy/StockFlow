@@ -46,20 +46,9 @@ The analytics-ready Gold models power an interactive **Power BI dashboard**, ena
 ---
 
 ## 🏗️ Architecture
+The architecture follows a decoupled data flow, with each component responsible for a specific stage of the pipeline:
 
-```mermaid
-flowchart LR
-    A[Stock API] --> B[Python Producer]
-    B --> C[(Kafka Topic)]
-    C --> D[Python Consumer]
-    D --> E[(MinIO Raw Storage)]
-    E --> F[Airflow DAG]
-    F --> G[(Snowflake)]
-    G --> H[Bronze]
-    H --> I[Silver]
-    I --> J[Gold]
-    J --> K[Power BI]
-```
+**Ingest → Stream → Store → Orchestrate → Transform → Analyze**
 
 | Layer | Tool | Role |
 |---|---|---|
@@ -143,36 +132,6 @@ Keeping this logic in dbt means Power BI only ever consumes clean, business-read
 - **Performance ranking** — horizontal bar chart of % change across stocks
 - **Risk positioning** — scatter plot of normalized volatility (0–100 scale on both axes)
 
-### Volatility normalization
-
-Both axes of the risk scatter plot use min-max normalization so stocks with different raw volatility scales stay comparable:
-
-```
-Normalized Value = (Current − Minimum) / (Maximum − Minimum) × 100
-```
-
-<details>
-<summary>DAX — Volatility Index & Relative Volatility Index</summary>
-
-```dax
-Volatility Index =
-VAR MinVol = MINX(ALL(GOLD_TREECHART[SYMBOL]), CALCULATE(MAX(GOLD_TREECHART[VOLATILITY])))
-VAR MaxVol = MAXX(ALL(GOLD_TREECHART[SYMBOL]), CALCULATE(MAX(GOLD_TREECHART[VOLATILITY])))
-VAR CurrentVol = MAX(GOLD_TREECHART[VOLATILITY])
-RETURN DIVIDE(CurrentVol - MinVol, MaxVol - MinVol, 0) * 100
-```
-
-```dax
-Relative Volatility Index =
-VAR MinValue = MINX(ALL(GOLD_TREECHART[SYMBOL]), CALCULATE(MAX(GOLD_TREECHART[RELATIVE_VOLATILITY])))
-VAR MaxValue = MAXX(ALL(GOLD_TREECHART[SYMBOL]), CALCULATE(MAX(GOLD_TREECHART[RELATIVE_VOLATILITY])))
-VAR CurrentValue = MAX(GOLD_TREECHART[RELATIVE_VOLATILITY])
-RETURN DIVIDE(CurrentValue - MinValue, MaxValue - MinValue, 0) * 100
-```
-
-</details>
-
----
 
 ## 🚀 Getting Started
 
@@ -254,11 +213,6 @@ The value here isn't any single tool — it's the integration: a live market eve
 ## 👤 Author
 
 **Rohit Raj**
-M.Sc. Economics & Management, IIIT Lucknow
-Interested in Data Analytics, Product Analytics, and Data Engineering.
-
-LinkedIn · GitHub · Email — *add links*
-
 ---
 
 If this was useful, a ⭐ on the repo is appreciated. Contributions and feedback welcome.
