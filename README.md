@@ -1,4 +1,4 @@
-# Stock-Flow: Real-Time Stock Market Data Pipeline
+# Stock-Flow: Real-Time Stock Market Data Engineering Pipeline
 
 ![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white)
 ![dbt](https://img.shields.io/badge/dbt-FF694B?style=for-the-badge&logo=dbt&logoColor=white)
